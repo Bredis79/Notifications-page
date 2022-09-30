@@ -1,0 +1,152 @@
+:root {
+   
+
+--Red: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+
+
+--White: hsl(0, 0%, 100%);
+--Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-grayish-blue-1: hsl(211, 68%, 94%);
+--Light-grayish-blue-2: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: url(../assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+main {
+    width: 100%;
+    max-width: 375px;
+    height: 901px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid red;
+    
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 17px;
+    margin: 25px 0 44px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: url(..//assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
+}
+
+header .number {
+    padding: 0px 10px;
+    background-color: var(--Blue);
+    border-radius: 5px;
+    color: var(--White);
+}
+
+header h2 {
+    font-size: 1rem;
+    color: var(--Grayish-blue);
+}
+
+.posts {
+    padding: 0 40px 0 30px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul > li {
+    list-style: none;
+    font-weight: 800;
+    color: var(--Grayish-blue);
+}
+.mark, .angela, .jacob, .rizky, .kimberly, .nathan, .anna {
+    display: flex;
+    height: 60px;
+    margin-bottom: 45px;
+ }
+
+article img {
+    width: 40px;
+    height: 40px;
+}
+
+.text {
+    margin-left: 15px;
+}
+
+.name {
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+    font-family: url(../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+ }
+
+.postName {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--Dark-grayish-blue);
+    
+} 
+
+.blue {
+    color: var(--Blue);
+}
+
+.dot::after {
+    content: "";
+    margin-left: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--Red);
+    display: inline-block;
+}
+
+.chess {
+    margin: 0;
+    padding: 0;
+}
+
+.answear {
+    color: var(--Grayish-blue);
+    border: 1px solid var(--Light-grayish-blue-2);
+    width: 263px;
+    height: 120px;
+    margin: -23px 0 30px 51px;
+    padding: 16px 0 15px 12px;
+    border-radius: 5px;
+    font-size: 1.04rem;
+    font-weight: 800;
+    position: relative;
+    line-height: 1.1rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
