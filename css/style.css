@@ -14,6 +14,8 @@
 --Very-dark-blue: hsl(224, 21%, 14%);
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +24,8 @@
 
 html {
     font-size: 16px;
-    font-family: url(../assets/fonts/static/PlusJakartaSans-Medium.ttf);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
 }
 
 body {
@@ -32,48 +35,60 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    background-color: var(--Very-light-grayish-blue);
 }
 
 main {
     width: 100%;
-    max-width: 375px;
-    height: 901px;
+    min-width: 375px;
+    max-width: 720px;
+    min-height: 901px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border: 1px solid red;
-    
+    background-color: var(--White);
 }
-
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 17px;
-    margin: 25px 0 44px;
+    margin: 20px 0 20px;
+    align-items: baseline;
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    font-family: url(..//assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
+    line-height: 2rem
 }
 
 header .number {
-    padding: 0px 10px;
+    padding: 0px 10px 3px 10px;
+    margin-top: -5px;
+    margin-left: 5px;
     background-color: var(--Blue);
     border-radius: 5px;
     color: var(--White);
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 header h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--Grayish-blue);
 }
 
+header h2:hover{
+    cursor: pointer;
+    color: var(--Blue);
+}
+
 .posts {
-    padding: 0 40px 0 30px;
+    padding: 0 15px;
+    font-size: 0.9rem;
 }
 
 ul {
@@ -83,13 +98,18 @@ ul {
 
 ul > li {
     list-style: none;
-    font-weight: 800;
+    font-weight: 500;
     color: var(--Grayish-blue);
 }
 .mark, .angela, .jacob, .rizky, .kimberly, .nathan, .anna {
     display: flex;
-    height: 60px;
-    margin-bottom: 45px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 11px;
+    margin-left: 5px;
+    padding: 14px 16px 16px 16px;
+    border-radius: 10px;
+    line-height: 1.2rem;
  }
 
 article img {
@@ -102,22 +122,41 @@ article img {
 }
 
 .name {
-    font-size: 1.02rem;
     font-weight: 800;
     color: var(--Very-dark-blue);
-    font-family: url(../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+    margin-right: 3px;
  }
 
+.name:hover{
+    cursor: pointer;
+    color: var(--Blue);
+}
+
 .postName {
-    font-size: 1rem;
     font-weight: 800;
     color: var(--Dark-grayish-blue);
-    
+    font-size: 0.9rem;
+    margin-left: 3px;
 } 
+
+.postName:hover{
+    cursor: pointer;
+    color: var(--Blue);
+}
 
 .blue {
     color: var(--Blue);
 }
+
+.active {
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.active:hover{
+    background-color: var(--Light-grayish-blue-1)
+}
+
+
 
 .dot::after {
     content: "";
@@ -134,19 +173,89 @@ article img {
     padding: 0;
 }
 
+.chess:hover{
+    cursor: pointer;
+    color: var(--Blue);
+}
+
 .answear {
     color: var(--Grayish-blue);
     border: 1px solid var(--Light-grayish-blue-2);
-    width: 263px;
-    height: 120px;
-    margin: -23px 0 30px 51px;
-    padding: 16px 0 15px 12px;
+    min-width: 263px;
+    max-width: 560px;
+    max-height: 120px;
+    margin: -15px 0 30px 70px;
+    padding: 16px 21px 25px 12px;
     border-radius: 5px;
-    font-size: 1.04rem;
-    font-weight: 800;
+    font-size: 0.9rem;
+    font-weight: 500;
     position: relative;
     line-height: 1.1rem;
 }
 
+.answear:hover{
+    cursor: pointer;
+    background-color: var(--Light-grayish-blue-1);
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 475px){
+    html {
+        font-size: 1.1rem;
+    }
+    body {
+        margin-top: 10px;
+    }
+    main {
+        max-width: 730px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    header {
+        margin-top: 31px;
+        margin-bottom: 22px;
+        padding: 0 30px;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    
+    }
+    .mark, .angela, .jacob, .rizky, .kimberly, .nathan, .anna {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-bottom: 9px;
+        padding: 19px 16px 17px 17px;
+        border-radius: 10px;
+        line-height: 1.2rem;
+    }
+    .posts {
+        padding: 0 30px;
+        font-size: 0.9rem;
+    }
+    article img {
+        width: 45px;
+        height: 45px;
+    }
+    .answear {
+        margin: -15px 0 30px 80px;
+        padding: 16px 0px 15px 18px;
+
+    }
+    .imgRight {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .chess {
+        margin-right: 10px;
+    }
+}
+
+/* @media (max-width: 490px) {
+    .imgRight {
+       display: inline-block;
+    }
+} */
