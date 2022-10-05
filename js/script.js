@@ -8,6 +8,7 @@ let persons = document.querySelectorAll(".person.unread")
 markAll.addEventListener("click", function(event){
   console.log(event)
   notification.textContent = "0"
+  number = 1
   for ( let active of persons) {
     active.classList.remove("unread")
   }
@@ -22,6 +23,7 @@ persons.forEach(person => {
           number = 1
     }
     person.classList.remove("unread")
+  
    
   })
 })
