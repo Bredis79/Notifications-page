@@ -1,20 +1,27 @@
 let notification = document.querySelector(".number")
-let markAll = document.querySelector("#mark")
-let unread = document.querySelector(".posts")
-let active = unread.querySelectorAll(".active")
+let number = Number(notification.innerText)
+let markAll = document.querySelector("#markAll")
+let persons = document.querySelectorAll(".person.unread")
 
 
+// mark all as readed
+markAll.addEventListener("click", function(event){
+  console.log(event)
+  notification.textContent = "0"
+  for ( let active of persons) {
+    active.classList.remove("unread")
+  }
+})
 
-
-
-let li = document.getElementsByTagName("li")
-
-
- console.log(li)
-
-active.addEventListener("click", function(e){
-    notification.textContent = "0"
-    li.classList.toggle("dot")
+// select a single unread post
+persons.forEach(person => {
+  person.addEventListener("click", function(event){
+    notification.textContent = number -1
+      number = notification.textContent
+        if (number <= 0){
+          number = 1
+    }
+    person.classList.remove("unread")
    
-    alert("kliknuto")
+  })
 })

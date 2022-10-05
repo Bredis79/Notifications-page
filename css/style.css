@@ -101,7 +101,7 @@ ul > li {
     font-weight: 500;
     color: var(--Grayish-blue);
 }
-.mark, .angela, .jacob, .rizky, .kimberly, .nathan, .anna {
+.person {
     display: flex;
     width: 100%;
     height: auto;
@@ -111,6 +111,17 @@ ul > li {
     border-radius: 10px;
     line-height: 1.2rem;
  }
+
+.person--kim {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 11px;
+    margin-left: 5px;
+    padding: 14px 16px 16px 16px;
+    border-radius: 10px;
+    line-height: 1.2rem;
+} 
 
 article img {
     width: 40px;
@@ -148,25 +159,26 @@ article img {
     color: var(--Blue);
 }
 
-.active {
+.unread {
     background-color: var(--Very-light-grayish-blue);
 }
 
-.active:hover{
+.unread:hover{
     background-color: var(--Light-grayish-blue-1)
 }
 
-
-
-.dot::after {
+.unread::after {
     content: "";
     margin-left: 5px;
+    margin-top: 5px;
     width: 9px;
     height: 9px;
     border-radius: 50%;
     background-color: var(--Red);
     display: inline-block;
 }
+
+
 
 .chess {
     margin: 0;
@@ -182,7 +194,7 @@ article img {
     color: var(--Grayish-blue);
     border: 1px solid var(--Light-grayish-blue-2);
     min-width: 263px;
-    max-width: 560px;
+    max-width: 565px;
     max-height: 120px;
     margin: -15px 0 30px 70px;
     padding: 16px 21px 25px 12px;
@@ -222,7 +234,7 @@ article img {
         font-size: 1.4rem;
     
     }
-    .mark, .angela, .jacob, .rizky, .kimberly, .nathan, .anna {
+    .person {
         display: flex;
         width: 100%;
         height: auto;
@@ -240,22 +252,14 @@ article img {
         height: 45px;
     }
     .answear {
-        margin: -15px 0 30px 80px;
-        padding: 16px 0px 15px 18px;
+        margin: -15px 0 30px 83px;
+        padding: 16px 20px 15px 18px;
 
     }
-    .imgRight {
-        width: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    .chess {
-        margin-right: 10px;
+
+     .chess {
+        margin-left: clamp(10px, 15vw, 190px)
+     
     }
 }
 
-/* @media (max-width: 490px) {
-    .imgRight {
-       display: inline-block;
-    }
-} */
